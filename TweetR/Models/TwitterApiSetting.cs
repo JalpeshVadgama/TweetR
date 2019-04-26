@@ -1,4 +1,4 @@
-﻿namespace TweetR.Model
+﻿namespace TweetR.Models
 {
     public class TwitterApiSetting
     {
@@ -9,7 +9,7 @@
 
         public TwitterApiSetting()
         {
-        
+            
         }
     }
 }
