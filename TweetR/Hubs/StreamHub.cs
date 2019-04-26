@@ -42,7 +42,7 @@ namespace TweetR.Hubs
                     await
                        (from strm in twitterCtx.Streaming
                         where strm.Type == StreamingType.Filter &&
-                              strm.Track.ToLower() == "azure"
+                              strm.Track.ToLower() == "azure, globalazure"
                         select strm)
                        .StartAsync(async strm =>
                        {
@@ -54,10 +54,8 @@ namespace TweetR.Hubs
             catch (Exception)
             {
                 writer.TryComplete();
-
             }
             writer.TryComplete();
         }
-
     }
 }
